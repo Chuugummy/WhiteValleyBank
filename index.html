@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>GRBank</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3N7BMCSMX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z3N7BMCSMX');
+</script>
+</head>
+
+<body id="htmlbody" style="padding: 15px;background: rgb(251,251,251);">
+    <nav class="navbar navbar-light navbar-expand-md" style="margin-bottom: 14px;border-radius: 5px;background: #ffffff;border: 1px solid rgba(0,0,0,0.125) ;">
+        <div class="container-fluid"><a class="navbar-brand" href="#"><strong>White Valley Bank</strong></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" onclick=""><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="margin-right: 5px;margin-bottom: 3px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M21 8.77217L14.0208 1.79299C12.8492 0.621414 10.9497 0.621413 9.77817 1.79299L3 8.57116V23.0858H10V17.0858C10 15.9812 10.8954 15.0858 12 15.0858C13.1046 15.0858 14 15.9812 14 17.0858V23.0858H21V8.77217ZM11.1924 3.2072L5 9.39959V21.0858H8V17.0858C8 14.8767 9.79086 13.0858 12 13.0858C14.2091 13.0858 16 14.8767 16 17.0858V21.0858H19V9.6006L12.6066 3.2072C12.2161 2.81668 11.5829 2.81668 11.1924 3.2072Z" fill="currentColor"></path>
+                            </svg>Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="$(&quot;#account&quot;).modal(&quot;show&quot;);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="margin-right: 5px;margin-bottom: 3px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16 9C16 11.2091 14.2091 13 12 13C9.79086 13 8 11.2091 8 9C8 6.79086 9.79086 5 12 5C14.2091 5 16 6.79086 16 9ZM14 9C14 10.1046 13.1046 11 12 11C10.8954 11 10 10.1046 10 9C10 7.89543 10.8954 7 12 7C13.1046 7 14 7.89543 14 9Z" fill="currentColor"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM3 12C3 14.0902 3.71255 16.014 4.90798 17.5417C6.55245 15.3889 9.14627 14 12.0645 14C14.9448 14 17.5092 15.3531 19.1565 17.4583C20.313 15.9443 21 14.0524 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12ZM12 21C9.84977 21 7.87565 20.2459 6.32767 18.9878C7.59352 17.1812 9.69106 16 12.0645 16C14.4084 16 16.4833 17.1521 17.7538 18.9209C16.1939 20.2191 14.1881 21 12 21Z" fill="currentColor"></path>
+                            </svg>Account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="Flux.showPopup(&quot;Unavailable&quot;, &quot;This functionality is not currently available.&quot;);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="margin-right: 5px;margin-bottom: 3px;">
+                                <path d="M9 6C8.44772 6 8 6.44772 8 7C8 7.55228 8.44772 8 9 8H15C15.5523 8 16 7.55228 16 7C16 6.44772 15.5523 6 15 6H9Z" fill="currentColor"></path>
+                                <path d="M9 10C8.44772 10 8 10.4477 8 11C8 11.5523 8.44772 12 9 12H15C15.5523 12 16 11.5523 16 11C16 10.4477 15.5523 10 15 10H9Z" fill="currentColor"></path>
+                                <path d="M13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17Z" fill="currentColor"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4 5C4 3.34315 5.34315 2 7 2H17C18.6569 2 20 3.34315 20 5V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V5ZM7 4H17C17.5523 4 18 4.44772 18 5V19C18 19.5523 17.5523 20 17 20H7C6.44772 20 6 19.5523 6 19V5C6 4.44772 6.44771 4 7 4Z" fill="currentColor"></path>
+                            </svg>Status</a></li>
+                    <li class="nav-item"><a class="nav-link" id="taxviewbtn" href="#" onclick="showTaxPanel();" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="margin-right: 5px;margin-bottom: 3px;">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2 8V16C2 16.5523 2.44772 17 3 17H16.6202C16.9121 17 17.1895 16.8724 17.3795 16.6508L20.808 12.6508C21.129 12.2763 21.129 11.7237 20.808 11.3492L17.3795 7.34921C17.1895 7.12756 16.9121 7 16.6202 7H3C2.44772 7 2 7.44772 2 8ZM0 8V16C0 17.6569 1.34315 19 3 19H16.6202C17.496 19 18.328 18.6173 18.898 17.9524L22.3265 13.9524C23.2895 12.8289 23.2895 11.1711 22.3265 10.0476L18.898 6.04763C18.328 5.38269 17.496 5 16.6202 5H3C1.34315 5 0 6.34315 0 8Z" fill="currentColor"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15 13C15.5523 13 16 12.5523 16 12C16 11.4477 15.5523 11 15 11C14.4477 11 14 11.4477 14 12C14 12.5523 14.4477 13 15 13ZM15 15C16.6569 15 18 13.6569 18 12C18 10.3431 16.6569 9 15 9C13.3431 9 12 10.3431 12 12C12 13.6569 13.3431 15 15 15Z" fill="currentColor"></path>
+                            </svg>Tax Panel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showUpdates()"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-cloud-upload" style="margin-right: 5px;margin-bottom: 3px;">
+                                <path fill-rule="evenodd" d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z"></path>
+                                <path fill-rule="evenodd" d="M7.646 4.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V14.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3z"></path>
+                            </svg>Updates</a></li>
+                </ul><span class="spinner-border text-primary" role="status" id="spinner" style="margin-left: auto;"></span>
+            </div>
+        </div>
+    </nav>
+    <div class="alert alert-warning" role="alert" id="maintenance" style="display: none;"><span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 -0.5 17 17" fill="currentColor" class="bi bi-exclamation-triangle" style="margin-bottom: 3px;margin-right: 16px;">
+                <path fill-rule="evenodd" d="M7.938 2.016a.146.146 0 0 0-.054.057L1.027 13.74a.176.176 0 0 0-.002.183c.016.03.037.05.054.06.015.01.034.017.066.017h13.713a.12.12 0 0 0 .066-.017.163.163 0 0 0 .055-.06.176.176 0 0 0-.003-.183L8.12 2.073a.146.146 0 0 0-.054-.057A.13.13 0 0 0 8.002 2a.13.13 0 0 0-.064.016zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"></path>
+                <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"></path>
+            </svg><strong>Maintenance </strong>We are currently performing maintenance on our system. You may experience some issues during this time period.</span></div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="authmodal" style="background: #ffffff;" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Authenticate</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close" style="display: none;"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Please enter your account pin-code. If you don't have one or forgot it, visit the bank.</p>
+                    <form><input class="form-control" type="text" id="auth_entry" placeholder="Please enter your 6 digit pin-code"></form>
+                    <div class="alert alert-warning" role="alert" id="auth_error" style="margin-bottom: 0px;margin-top: 15px;display: none;"><span>Code incorrect or a server error occurred.</span></div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary" id="auth" type="button">Submit</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="withdraw">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Withdraw</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>You will be withdrawing some of your balance to Minecraft. You must be in the game, and the server must be online.</p>
+                    <form>
+                        <p style="margin-bottom: 3px;">Minecraft Username</p><input class="form-control" type="text" id="with_name" placeholder="Please enter your Minecraft username">
+                    </form>
+                    <form style="margin-top: 15px;">
+                        <p style="margin-bottom: 3px;">Amount to Withdraw</p><input class="form-control" type="number" id="with_amount" placeholder="Please enter the amount to withdraw" min="1">
+                    </form>
+                    <div class="alert alert-danger" role="alert" id="with_error" style="margin-bottom: 0px;margin-top: 14px;display: none;"><span>There is an error in your form, or the server is not online.</span></div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button" onclick="withdraw();">Withdraw</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="send">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Send Money</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>You are sending money to someone. Please note that this action is irreversible.</p>
+                    <form>
+                        <p style="margin-bottom: 3px;">Send To</p>
+                        <div>
+                            <form>
+                                <div id="send-people"></div>
+                            </form>
+                        </div>
+                    </form>
+                    <form style="margin-top: 15px;">
+                        <p style="margin-bottom: 3px;">Amount</p><input class="form-control" type="number" id="send_amount" placeholder="Please enter the amount to send" min="1">
+                    </form>
+                    <div class="alert alert-danger" role="alert" id="send_error" style="margin-bottom: 0px;margin-top: 14px;display: none;"><span>There is an error in your form, or the server is not online.</span></div>
+                </div>
+                <div class="modal-footer"><span class="spinner-border text-primary" role="status" id="send_spinner" style="margin-right: auto;"></span><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" id="send-btn" type="button" onclick="submitSendMoney()">Send</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="updates">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">White Valley Bank Dev Log</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div id="updates-markup"></div>
+                </div>
+                <div class="modal-footer"><span class="spinner-border text-primary" role="status" id="update-spinner" style="margin-right: auto;"></span><button class="btn btn-primary" type="button" data-dismiss="modal">Close</button></div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div style="display: flex;">
+            <div style="width: 30%;">
+                <div class="card" style="border-right-color: rgba(0, 0, 0, 0.125);">
+                    <div class="card-body">
+                        <div class="alert alert-danger" role="alert" id="debt" style="margin-bottom: 27px;display: none;"><span>You are in <strong>debt</strong>! You will lose your credit score over time if you don't fix it soon.<br></span></div>
+                        <h6 class="text-muted card-subtitle mb-2">Your Account</h6>
+                        <h2 id="iron" style="margin-top: 0px;">...</h2><button class="btn btn-primary" type="button" style="margin-top: 20px;" onclick="$(&quot;#send&quot;).modal(&quot;show&quot;);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-server" style="margin-right: 5px;margin-bottom: 3px;">
+                                <path fill-rule="evenodd" d="M1.333 2.667C1.333 1.194 4.318 0 8 0s6.667 1.194 6.667 2.667V4C14.665 5.474 11.68 6.667 8 6.667 4.318 6.667 1.333 5.473 1.333 4V2.667zm0 3.667v3C1.333 10.805 4.318 12 8 12c3.68 0 6.665-1.193 6.667-2.665V6.334c-.43.32-.931.58-1.458.79C11.81 7.684 9.967 8 8 8c-1.967 0-3.81-.317-5.21-.876a6.508 6.508 0 0 1-1.457-.79zm13.334 5.334c-.43.319-.931.578-1.458.789-1.4.56-3.242.876-5.209.876-1.967 0-3.81-.316-5.21-.876a6.51 6.51 0 0 1-1.457-.79v1.666C1.333 14.806 4.318 16 8 16s6.667-1.194 6.667-2.667v-1.665z"></path>
+                            </svg>Send Money</button><button class="btn btn-primary" type="button" style="margin-top: 20px;margin-left: 5px;" onclick="$(&quot;#withdraw&quot;).modal(&quot;show&quot;);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-cash-stack" style="margin-right: 5px;margin-bottom: 3px;">
+                                <path d="M14 3H1a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1h-1z"></path>
+                                <path fill-rule="evenodd" d="M15 5H1v8h14V5zM1 4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H1z"></path>
+                                <path d="M13 5a2 2 0 0 0 2 2V5h-2zM3 5a2 2 0 0 1-2 2V5h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 13a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+                            </svg>Withdraw</button><button class="btn btn-primary" type="button" style="margin-top: 20px;margin-left: 5px;padding-top: 5px;padding-bottom: 5px;padding-right: 10px;padding-left: 10px;" onclick="loadData()"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="margin-bottom: 3px;width: 20px;height: 20px;">
+                                <path d="M13.1459 11.0499L12.9716 9.05752L15.3462 8.84977C14.4471 7.98322 13.2242 7.4503 11.8769 7.4503C9.11547 7.4503 6.87689 9.68888 6.87689 12.4503C6.87689 15.2117 9.11547 17.4503 11.8769 17.4503C13.6977 17.4503 15.2911 16.4771 16.1654 15.0224L18.1682 15.5231C17.0301 17.8487 14.6405 19.4503 11.8769 19.4503C8.0109 19.4503 4.87689 16.3163 4.87689 12.4503C4.87689 8.58431 8.0109 5.4503 11.8769 5.4503C13.8233 5.4503 15.5842 6.24474 16.853 7.52706L16.6078 4.72412L18.6002 4.5498L19.1231 10.527L13.1459 11.0499Z" fill="currentColor"></path>
+                            </svg></button>
+                    </div>
+                </div>
+                <div class="card" style="margin-top: 10px;">
+                    <div class="card-body">
+                        <h6 class="text-muted card-subtitle mb-2">Players Online</h6>
+                        <div id="playersOnline">
+                            <p style="margin-bottom: 0px;">No one is on the server right now.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="margin-top: 10px;">
+                    <div class="card-body">
+                        <h6 class="text-muted card-subtitle mb-2">Server News</h6>
+                        <div id="news-dom"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-newspaper" style="margin-right: 8px;margin-bottom: 3px;">
+                                    <path fill-rule="evenodd" d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"></path>
+                                    <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"></path>
+                                </svg>...<br></a></div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-left: 31px;width: 70%;">
+                <h1 id="welcome">Welcome, ...</h1>
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="text-muted card-subtitle mb-2">Recent Transactions</h6>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>To</th>
+                                        <th>Memo</th>
+                                        <th>Type</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="transactions"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="account">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Your Account</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div id="acc-info" style="display: flex;">
+                        <div>
+                            <p style="margin-bottom: 3px;">Account Name <strong>... ...</strong></p>
+                            <p style="margin-bottom: 3px;">Account ID&nbsp;<strong>... ...</strong></p>
+                            <p style="margin-bottom: 0px;">Session ID&nbsp;<strong>... ...</strong></p>
+                        </div>
+                        <div style="margin-left: 30px;">
+                            <p style="margin-bottom: 3px;">Pincode<strong> ... ...</strong></p>
+                        </div>
+                    </div>
+                    <hr><button class="btn btn-primary" type="button" onclick="changeSetting(&quot;pincode&quot;, true);">Change Pincode</button><button class="btn btn-primary" type="button" onclick="changeSetting(&quot;username&quot;, false);" style="margin-left: 10px;">Change Name</button><button class="btn btn-danger" type="button" onclick="logout()" style="margin-left: 10px;">Log Out</button>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary" type="button" data-dismiss="modal">Close</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="editaccount">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="edit-title">Configuring ${object}</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div id="edit-content">
+                        <p style="margin-bottom: 5px;">Please choose a new <strong>account ${object}</strong>.</p>
+                        <form><input class="form-control" type="text" placeholder="Please enter a new ${object}..."></form>
+                    </div>
+                    <div class="alert alert-warning" role="alert" id="alert-edit" style="margin-bottom: 0px;margin-top: 12px;display: none;"><span>Value is too short.</span></div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" id="btnsubmitdata" type="button" onclick="submitData();">Save</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="readNews">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="newsRenderTitle">...</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div id="newsRenderDom"></div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary" type="button" data-dismiss="modal">Close</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="issueTaxPrompt">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Confirmation</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body" id="issueTaxHtml">
+                    <p>Are you sure you want to issue a tax collection? This process cannot be reversed.</p>
+                    <p style="margin-bottom: 0px;">Your balance after tax:</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">No</button><button class="btn btn-primary" type="button" onclick="issueTax();">Issue</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="shopView">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Title</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>The content of your modal.</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="popup">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="popupTitle">Popup Title</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p id="popupBody" style="margin-bottom: 0px;">Popup Body</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-primary" type="button" data-dismiss="modal">Okay</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+    <script src="assets/js/Modules/Flux.js"></script>
+    <script src="assets/js/Pages/index/analytics.js"></script>
+    <script src="assets/js/Pages/index/index.js"></script>
+    <script src="assets/js/Pages/index/intervals.js"></script>
+    <script src="assets/js/Pages/index/maintenance.js"></script>
+    <script src="assets/js/Pages/index/news.js"></script>
+    <script src="assets/js/Pages/index/online.js"></script>
+    <script src="assets/js/Pages/index/send.js"></script>
+    <script src="assets/js/Pages/index/settings.js"></script>
+    <script src="assets/js/Pages/index/tax.js"></script>
+    <script src="assets/js/Pages/index/updates.js"></script>
+</body>
+
+</html>
