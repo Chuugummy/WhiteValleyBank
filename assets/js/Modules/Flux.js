@@ -2,7 +2,7 @@ const Flux = {
     Server: {
         getPlayersOnline: function(callback) {
             axios.get(
-                "http://72.13.20.105:231/bank/players"
+                "https://api.ryujinx.tk/bank/players"
             ).then(response => {
                 callback(response.data.players);  
             });

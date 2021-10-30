@@ -5,7 +5,7 @@ function showUpdates() {
     update_spinner.style.display = "inherit";
     
     axios.get(
-        "http://72.13.20.105:231/bank/updates"
+        "https://api.ryujinx.tk/bank/updates"
     ).then(response => {
         document.getElementById("updates-markup").innerHTML = marked(response.data);
         

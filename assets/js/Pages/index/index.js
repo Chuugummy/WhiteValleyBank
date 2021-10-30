@@ -150,7 +150,7 @@ async function loadData() {
 
 function serverUp(callback) {
     axios.get(
-        "http://72.13.20.105:231/bank/server"
+        "https://api.ryujinx.tk/bank/server"
     ).then(function(response) {
         callback(response.data);
     });
@@ -187,7 +187,7 @@ function withdraw() {
                withdraw_error();
            } else {
                axios.post(
-                   "http://72.13.20.105:231/bank/withdrawmc",
+                   "https://api.ryujinx.tk/bank/withdrawmc",
                    {
                        playerName: name,
                        amount: amount,
