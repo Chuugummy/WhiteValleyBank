@@ -53,9 +53,9 @@ $("#send").on("shown.bs.modal", function() {
     ).then(response => {
         response.data.response.users.forEach(user => {
             var banned = `<span class="badge badge-danger">Banned</span>`;
-            
+
             var data = `
-                <div class="custom-control custom-radio"><input type="radio" class="custom-control-input" id="user-${user._id}" name="users" /><label class="custom-control-label" for="user-${user._id}">${user.name} ${user.banned ? banned : ""}</label></div>
+                <div style="margin-top:4px;" class="custom-control custom-radio"><input type="radio" class="custom-control-input" id="user-${user._id}" name="users" /><label class="custom-control-label" for="user-${user._id}"><img src="${user.picture}" style="width: 24px;height: 24px;border-radius: 1000px!important;margin-right: 9px;" loading="auto" />${user.name} ${user.banned ? banned : ""}</label></div>
             `;
             
             append.push(data);

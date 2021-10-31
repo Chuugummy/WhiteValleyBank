@@ -110,6 +110,8 @@ async function loadData() {
                     </div>
                 </div>
             `;
+            
+            document.getElementById("pfp").src = acc.picture;
 
             var append = [];
             response.data.response.transactions.forEach(transact => {

@@ -1,6 +1,53 @@
 var current_edit_id;
 var edit_name;
 
+function isFileImage(file) {
+    return file && file['type'].split('/')[0] === 'image';
+}
+
+function uploadProfilePic() {
+    var input = document.createElement('input');
+    input.type = 'file';
+    input.accept = "image/png, image/jpeg";
+
+    input.onchange = e => { 
+       var file = e.target.files[0];
+        
+       if (!isFileImage(file)) {
+           $("#account").modal("hide");
+           
+           setTimeout(function() {
+               Flux.showPopup("Invalid", "The file is invalid: must be .png or .jpeg");
+           }, 250);
+           
+           return;
+       }
+
+       var reader = new FileReader();
+       reader.readAsDataURL(file);
+
+       reader.onload = readerEvent => {
+          var content = readerEvent.target.result;
+           
+          var formData = new FormData();
+          var imagefile = content;
+          formData.append("picture", imagefile); 
+          formData.append("pin", getCookie("auth"));
+
+          axios.post(
+              "https://brixybot.bubbleapps.io/version-test/api/1.1/wf/uploadpfp",
+              formData
+          ).then(response => {
+              $("#account").modal("hide");
+              loadData();
+          });
+       }
+
+    }
+
+    input.click();
+}
+
 function changeSetting(settingName, hide) {
     current_edit_id = uuid.v4();
     edit_name = settingName;
