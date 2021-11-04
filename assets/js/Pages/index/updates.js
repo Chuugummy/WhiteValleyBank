@@ -7,7 +7,7 @@ function showUpdates() {
     axios.get(
         "https://api.ryujinx.tk/bank/updates"
     ).then(response => {
-        document.getElementById("updates-markup").innerHTML = marked(response.data);
+        document.getElementById("updates-markup").innerHTML = marked.parse(response.data);
         
         update_spinner.style.display = "none";
     });

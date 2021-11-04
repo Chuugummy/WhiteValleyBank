@@ -30,7 +30,7 @@ function renderNews() {
 function seeNews(id) {
     var post = g_posts.find((post) => post._id == id);
     
-    document.getElementById("newsRenderDom").innerHTML = marked(post.body);
+    document.getElementById("newsRenderDom").innerHTML = marked.parse(post.body);
     
     document.getElementById("newsRenderTitle").innerHTML = post.title;
     
