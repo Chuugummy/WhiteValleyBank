@@ -22,12 +22,12 @@
 </script>
 </head>
 
-<body id="htmlbody" style="padding: 15px;background: rgb(251,251,251);">
-    <nav class="navbar navbar-light navbar-expand-md" style="margin-bottom: 14px;border-radius: 5px;background: #ffffff;border: 1px solid rgba(0,0,0,0.125) ;">
-        <div class="container-fluid"><a class="navbar-brand" href="#"><strong>White Valley Bank</strong></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+<body id="htmlbody" style="padding: 15px;background: 121212;">
+    <nav class="navbar navbar-light navbar-expand-md" style="margin-bottom: 14px;border-radius: 5px;background: #ffffff;border: 1px solid rgba(0,0,0,0.125);">
+        <div class="container-fluid"><a class="navbar-brand" href="#" style="background: -webkit-linear-gradient(#f74d80, #e6d375);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"><strong>White Valley Bank</strong></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" onclick=""><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="margin-right: 5px;margin-bottom: 3px;">
+                    <li class="nav-item"><a class="nav-link" onclick=""><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" class="hover-grad-icon" style="margin-right: 5px;margin-bottom: 3px;">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M21 8.77217L14.0208 1.79299C12.8492 0.621414 10.9497 0.621413 9.77817 1.79299L3 8.57116V23.0858H10V17.0858C10 15.9812 10.8954 15.0858 12 15.0858C13.1046 15.0858 14 15.9812 14 17.0858V23.0858H21V8.77217ZM11.1924 3.2072L5 9.39959V21.0858H8V17.0858C8 14.8767 9.79086 13.0858 12 13.0858C14.2091 13.0858 16 14.8767 16 17.0858V21.0858H19V9.6006L12.6066 3.2072C12.2161 2.81668 11.5829 2.81668 11.1924 3.2072Z" fill="currentColor"></path>
                             </svg>Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#" onclick="$(&quot;#account&quot;).modal(&quot;show&quot;);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="margin-right: 5px;margin-bottom: 3px;">
@@ -171,7 +171,7 @@
                     <div class="card-body">
                         <h6 class="text-muted card-subtitle mb-2">Recent Transactions</h6>
                         <div class="table-responsive">
-                            <table class="table table-striped">
+                            <table class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
@@ -257,16 +257,16 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="shopView">
+    <div class="modal fade" role="dialog" tabindex="-1" id="transactionView">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Modal Title</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Transaction</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body">
-                    <p>The content of your modal.</p>
+                    <div id="transactionContent"></div>
                 </div>
-                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
+                <div class="modal-footer"><button class="btn btn-primary" type="button" data-dismiss="modal">Close</button></div>
             </div>
         </div>
     </div>

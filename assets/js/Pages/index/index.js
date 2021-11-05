@@ -1,4 +1,5 @@
 var account;
+var transactions;
 var spinner = document.getElementById("spinner");
 
 function getValue(html_id) {
@@ -45,6 +46,43 @@ document.getElementById("auth").onclick = async function() {
             autherror();
         }
     });
+}
+
+function seeTransaction(id) {
+    var tr = transactions.find((tr) => tr._id == id);
+    console.log(tr)
+    document.getElementById("transactionContent").innerHTML = `
+        <div id="transactionContent">
+        <p style="margin-bottom: 0px;">Transaction ${tr._id.substring(6, tr._id.indexOf("x"))}</p>
+        <hr />
+        <div style="display: flex;">
+            <div style="width:50%">
+                <div><span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-person-circle" style="margin-right: 7px;">
+                            <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"></path>
+                            <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+                            <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"></path>
+                        </svg>To <strong>${tr.to}</strong></span></div>
+                <div style="margin-top: 5px;"><span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-ui-radios" style="margin-right: 7px;">
+                            <path d="M7 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zM0 12a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm7-1.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1z"></path>
+                            <path fill-rule="evenodd" d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zM3 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 4.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
+                        </svg>Type <strong>${tr.type}</strong></span></div>
+            </div>
+            <div style="margin-left: 25px; width:50%;">
+                <div><span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-cash-stack" style="margin-right: 7px;">
+                            <path d="M14 3H1a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1h-1z"></path>
+                            <path fill-rule="evenodd" d="M15 5H1v8h14V5zM1 4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H1z"></path>
+                            <path d="M13 5a2 2 0 0 0 2 2V5h-2zM3 5a2 2 0 0 1-2 2V5h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 13a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"></path>
+                        </svg>Amount <strong>${tr.amount}</strong></span></div>
+                <div style="margin-top: 5px;"><span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" class="bi bi-file-richtext" style="margin-right: 7px;">
+                            <path fill-rule="evenodd" d="M4 0h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H4z"></path>
+                            <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 9h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm1.639-3.708l1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V7.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V7s1.54-1.274 1.639-1.208zM6.25 5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5z"></path>
+                        </svg>Memo <strong>${tr.memo}</strong></span></div>
+            </div>
+        </div>
+    </div>
+    `;
+    
+    $("#transactionView").modal("show");
 }
 
 async function authenticate(pincode, callback) {
@@ -116,7 +154,7 @@ async function loadData() {
             var append = [];
             response.data.response.transactions.forEach(transact => {
                 var data = `
-                    <tr>
+                    <tr style="cursor:pointer" onclick='seeTransaction("${transact._id}")'>
                         <td>${transact._id.substring(6, transact._id.indexOf("x"))}</td>
                         <td>${transact.to}</td>
                         <td>${transact.memo}</td>
@@ -127,6 +165,8 @@ async function loadData() {
                 
                 append.push(data);
             });
+            
+            transactions = response.data.response.transactions;
             
             document.getElementById("transactions").innerHTML = append.reverse().join("\n");
             
