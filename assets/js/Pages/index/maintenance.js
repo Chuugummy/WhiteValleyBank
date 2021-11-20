@@ -1,4 +1,4 @@
-var maintenance = false;
+var maintenance = true;
 
 $(document).ready(function() {
     if (maintenance == true) {
